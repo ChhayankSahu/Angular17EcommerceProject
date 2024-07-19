@@ -1,0 +1,167 @@
+<div class="jumbotron">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h3>Registration Angular 17 reactive form with validation</h3>
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="mobNumber">Mobile Number</label>
+            <input type="tel" class="form-control" formControlName="mobNumber">
+        </div>
+
+
+        <div class="form-group">
+            <label for="age">Enter your Age</label>
+            <input type="number" class="form-control" formControlName="age">
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Enter your DOB</label>
+            <input type="date" class="form-control" formControlName="dob">
+        </div>
+
+        <!---New Row -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="emil">Enter your Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="placeholdr email here">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="password">Enter your password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="placeholdr password here">
+            </div>
+
+            <div class="form-group">
+                <label for="addLine1">Enter your Address line 1</label>
+                <input type="text" class="form-control" formControlName="addLine1" placeholder="placeholdr addLine1 here">
+            </div>
+
+
+            <div class="form-group">
+                <label for="addLine2">Enter your Address line 2</label>
+                <input type="text" class="form-control" formControlName="addLine2" placeholder="placeholdr addLine2 here">
+            </div>
+        </div>
+        <div class="form-row col-md-6">
+            <div class="form-group">
+                <label for="city">Enter your city</label>
+                <input type="text" class="form-control" formControlName="city" placeholder="placeholdr city here">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="state">Enter your state</label>
+                <select name="" id="inputState" class="form-control" formControlName="state" >
+                    <option  selected>Choose...</option>
+                    <option value=""></option>
+                    <option value=""></option>
+
+                </select>
+            </div>
+
+
+            <div class="form-group col-md-2">
+                <label for="zipcode">Enter your zipcode</label>
+                <input type="text" class="form-control" formControlName="zipcode" placeholder="placeholdr zipcode here">
+            </div>
+
+
+        </div>
+
+<div class="form-group">
+    <label for="language">language</label>
+    <select multiple  class="form-control" formControlName="language">
+        <option value="hindi">Hindi</option>
+        <option value="english">English</option>
+        <option value="telgu">Telgu</option>
+        <option value="odiya">Odiya</option>
+    </select>
+</div>
+<div class="form-group"><label for="gender">Gender</label>
+
+ <div class="form-check form-check-inline">
+    <input type="radio" class="form-check-inline" formControlName="gender" value="Male">
+    <label for="male" class="form-check-inline">Male</label>
+ </div>
+  <div class="form-check form-check-inline">
+   <input type="radio" class="form-check-inline" formControlName="gender" value="Female">
+   <label for="female" class="form-check-inline" >Female</label>
+ </div>
+
+ <div class="form-check form-check-inline">
+    <input type="radio" class="form-check-inline" formControlName="gender" value="others" disabled>
+    <label for="others" class="form-check-inline" >others</label>
+  </div> 
+</div>
+
+<div class="form-group">
+    <label for="somethingAboutYou">Enter something about you</label>
+   <textarea class="form-control" rows="3" formControlName="aboutYou"></textarea>
+</div>
+
+<div class="form-group">
+    <label for="uploadphoto">upload your photo</label>
+   <input type="file" class="form-control" formControlName="uploadPhoto">
+</div>
+<div class="form-group">
+   <input type="checkbox" class="form-check-inline" formControlName="agreetc">
+   <label for="agreetc"class="form-check-inline">Terms and conditions</label>
+</div>
+
+
+<div class="form-group">
+    <label for="role">What do you want ?</label>
+    <select   class="form-control" formControlName="role" >
+        <option  >Choose...</option>
+        <option value="seller">seller</option>
+        <option value="buyer">buyer</option>
+    </select>
+</div>
+
+        <div class="form-group">
+<button class="btn btn-primary">register</button>
+
+        </div>
+
+        </form>
+
+
+
+        <!-- login form here -->
+
+        <p class="sim-pointer" routerLink="/sign-in"><a >Already have an account Click here to login</a></p>
+
+
+
+            </div>
+
+            <div class="col-md-6 offset-md-3">
+                <h3>Login Angular 17 template driven with validation</h3>
+            <form >
+                <div class="formgroup">
+                <label for="email">Email</label>
+                <input type="email" name="userEmail" id="email" class="form-control">
+                </div>
+
+                <div class="formgroup">
+                    <label for="password">Password</label>
+                    <input type="password" name="userPassword" id="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+            </form>
+            <p class="sim-pointer" routerLink="/sign-up"><a >Don`t have an account .Click here to register.</a></p>
+            
+
+
+            
+            </div>
+        </div>
+
+
+    </div>
+</div>

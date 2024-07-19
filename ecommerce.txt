@@ -1,0 +1,55 @@
+Create important modules
+
+ng generate module admin
+ng generate module core
+ng generate module customer
+ng generate module shared
+
+
+create important main components and will stay outside any module
+
+ng g component home
+ng g c contact-us
+ng g c product
+ng g c user-profile
+
+Module wise components and Services
+
+admin module based components:
+
+ng g c admin/admin-dashboard
+ng g c admin/admin-login
+ng g c admin/user-crud
+ng g s admin/services/admin
+
+---------------------
+core module based components:
+ng g s core/service/api
+ng g interceptor core/interceptors/http
+
+make models in core folder named object-model.ts
+
+---------------------------------------
+ng g c customer/buyer/buyer-dashboard
+ng g c customer/buyer/checkout
+ng g c customer/seller/seller-dashboard
+ng g c customer/signin-signup
+ng g s customer/services/customer
+ng g c customer/seller/checkout-seller
+
+-------------------------------------------
+
+ng g d shared/directives/number-only
+ng g c shared/layouts/footer
+ng g c shared/layouts/header
+ng g c shared/layouts/page-not-found
+ng g s shared/services/auth-guard
+ng g s shared/services/login-signup
+ng g s shared/services/product
+ng g s shared/services/user
+
+----------------------------------
+
+
+
+
