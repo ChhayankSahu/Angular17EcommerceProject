@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { User } from '../../core/Model/object-model';
 import { LoginSignupService } from '../../shared/services/login-signup.service';
@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-signin-signup',
   standalone: true,
-  imports: [RouterLink,CommonModule,HttpClientModule],
+  imports: [RouterLink,CommonModule,HttpClientModule,FormsModule,ReactiveFormsModule],
   templateUrl: './signin-signup.component.html',
   styleUrl: './signin-signup.component.css'
 })
@@ -40,7 +40,7 @@ ngOnInit():void
 
     this.signUpForm = this.formBuilder.group({
       name: ['', [Validators.required]],
-      mobNumber: ['', [Validators.required, Validators.maxLength(10)]],
+      mobNumber: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       gender: ['', [Validators.required]], 
       dob: ['', [Validators.required]],
@@ -99,6 +99,44 @@ onSubmitSignUp()
         this.router.navigateByUrl('/sign-in');
       }
     )
+
+}
+
+onSubmitSignIn()
+{
+   this.loginService.authLogin(this.signInFormValue.email,this.signInFormValue
+    .password).subscribe(data=>{
+      this.user_data=data;
+    
+      
+        if(this.user_data.role=="seller")
+        { 
+          sessionStorage.setItem("user_session_id",this.user_data.id);
+          sessionStorage.setItem("role",this.user_data.role);
+          this.router.navigateByUrl("/seller-dashboard");
+        }
+        else if(this.user_data.role=="buyer")
+          { 
+            sessionStorage.setItem("user_session_id",this.user_data.id);
+            sessionStorage.setItem("role",this.user_data.role);
+            this.router.navigateByUrl("/buyer-dashboard");
+          }
+          else if (this.user_data.role=="admin")
+          {
+            
+            sessionStorage.setItem("user_session_id",this.user_data.id);
+            sessionStorage.setItem("role",this.user_data.role);
+            this.router.navigateByUrl("/admin-dashboard");
+
+          }
+          else
+          {
+            alert("Incorrect or Invalid Login details");
+          }
+      console.log(this.user_data);
+    }, error=>{console.log("My signIN error from server ",error);}
+    
+   );
 
 }
 

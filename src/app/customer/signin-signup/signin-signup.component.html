@@ -1,9 +1,9 @@
 <div class="jumbotron">
     <div class="container">
     <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3" *ngIf="regForm">
     <h3>Registration Angular 17 reactive form with validation</h3>
-        <form action="">
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmitSignUp()">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" formControlName="name">
@@ -56,16 +56,16 @@
                 <label for="state">Enter your state</label>
                 <select name="" id="inputState" class="form-control" formControlName="state" >
                     <option  selected>Choose...</option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="mp">MP</option>
+                    <option value="up">UP</option>
 
                 </select>
             </div>
 
 
             <div class="form-group col-md-2">
-                <label for="zipcode">Enter your zipcode</label>
-                <input type="text" class="form-control" formControlName="zipcode" placeholder="placeholdr zipcode here">
+                <label for="zipCode">Enter your zipcode</label>
+                <input type="text" class="form-control" formControlName="zipCode" placeholder="placeholdr zipcode here">
             </div>
 
 
@@ -92,7 +92,7 @@
  </div>
 
  <div class="form-check form-check-inline">
-    <input type="radio" class="form-check-inline" formControlName="gender" value="others" disabled>
+    <input type="radio" class="form-check-inline" formControlName="gender" value="others" >
     <label for="others" class="form-check-inline" >others</label>
   </div> 
 </div>
@@ -138,17 +138,19 @@
 
             </div>
 
-            <div class="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3"  *ngIf="!regForm">
                 <h3>Login Angular 17 template driven with validation</h3>
-            <form >
+            <form name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
                 <div class="formgroup">
                 <label for="email">Email</label>
-                <input type="email" name="userEmail" id="email" class="form-control">
+                <input type="email" name="email" id="email" class="form-control" 
+                [(ngModel)]="signInFormValue.email" #email="ngModel" required email/>
                 </div>
 
                 <div class="formgroup">
                     <label for="password">Password</label>
-                    <input type="password" name="userPassword" id="password" class="form-control">
+                    <input type="password" name="password" id="password" class="form-control"
+                    [(ngModel)]="signInFormValue.password" #password="ngModel" required minlength="6" togglePassword>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary">Login</button>

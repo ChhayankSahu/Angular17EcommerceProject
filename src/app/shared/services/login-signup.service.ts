@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class LoginSignupService {
 public login_url="http://localhost:3000";
-public reg_url="http://localhost:3000";
+public reg_url="http://localhost:3000/user";
   constructor(private http:HttpClient,private apiService:ApiService) { }
 
-  authLogin(user_name: any,password: any):Observable<any>{
-    return this.apiService.get(this.login_url+'/user?email='+user_name+'&password='+password);
+  authLogin(email: any,password: any):Observable<any>{
+    return this.apiService.get(this.login_url+'/user?email='+email+'&password='+password);
   }
   userRegister(user_dto :any):Observable<any>
   {
