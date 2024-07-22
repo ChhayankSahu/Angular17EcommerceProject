@@ -1,36 +1,60 @@
 {
-	"user": [
-	  {
-		"name": "Ashish Mishra",
-		"mobNumber": "1234567891",
-		"age": 29,
-		"dob": "1995-05-12",
-		"email": "admin@gmail.com",
-		"password": "123456",
-		"address": {
-		  "addLine1": "District Center",
-		  "addLine2": "Janakpuri",
-		  "city": "New Delhi",
-		  "state": "Delhi",
-		  "zipCode": "110052"
-		},
-		"language": [
-		  "English",
-		  "Hindi",
-		  "Bhojpuri",
-		  "Telgu",
-		  "Kannad"
-		],
-		"gender": "Male",
-		"aboutYou": "I am a programmer...",
-		"uploadPhoto": "ashish.png",
-		"agreetc": true,
-		"role": "admin",
-		"id": 1
-	  }
-	],
-
-"products": [
+  "user": [
+    {
+      "name": "Ashish Mishra",
+      "mobNumber": "1234567891",
+      "age": 29,
+      "dob": "1995-05-12",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "address": {
+        "addLine1": "District Center",
+        "addLine2": "Janakpuri",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "zipCode": "110052"
+      },
+      "language": [
+        "English",
+        "Hindi",
+        "Bhojpuri",
+        "Telgu",
+        "Kannad"
+      ],
+      "gender": "Male",
+      "aboutYou": "I am a programmer...",
+      "uploadPhoto": "ashish.png",
+      "agreetc": true,
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "aboutYou": "abc@gmail.com",
+      "age": 21,
+      "agreetc": true,
+      "dob": "2002-02-21",
+      "email": "abc@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "abc@gmail.com",
+        "addLine2": "abc@gmail.com",
+        "city": "abc@gmail.com",
+        "state": "mp",
+        "zipCode": "2121111"
+      },
+      "language": [
+        "hindi"
+      ],
+      "password": "abc@gmail.com",
+      "mobNumber": "121212222",
+      "uploadPhoto": "C:\\fakepath\\frame.png",
+      "role": "seller",
+      "name": "abc@gmail.com"
+    }
+  ],
+  "products": [
     {
       "id": 1,
       "name": "Polyester Door Curtain",
@@ -156,7 +180,7 @@
       "mrp": "799",
       "dp": "499",
       "status": "publish"
- }
+    }
   ],
   "orders": [
     {
