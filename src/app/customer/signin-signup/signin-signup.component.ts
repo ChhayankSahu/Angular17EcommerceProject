@@ -121,14 +121,6 @@ onSubmitSignIn()
             sessionStorage.setItem("role",this.user_data.role);
             this.router.navigateByUrl("/buyer-dashboard");
           }
-          else if (this.user_data.role=="admin")
-          {
-            
-            sessionStorage.setItem("user_session_id",this.user_data.id);
-            sessionStorage.setItem("role",this.user_data.role);
-            this.router.navigateByUrl("/admin-dashboard");
-
-          }
           else
           {
             alert("Incorrect or Invalid Login details");
