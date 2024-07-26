@@ -11,6 +11,7 @@ import { SellerDashboardComponent } from './customer/seller/seller-dashboard/sel
 import { BuyerDashboardComponent } from './customer/buyer/buyer-dashboard/buyer-dashboard.component';
 import { CheckoutComponent } from './customer/buyer/checkout/checkout.component';
 import { PageNotFoundComponent } from './shared/layouts/page-not-found/page-not-found.component';
+import { AdminAuthGuardLogin, AdminAuthGuardService, BuyerAuthGuardService, SellerAuthGuardService, SellerBuyerAuthGuardLogin } from './shared/services/auth-guard.service';
 
 export const routes: Routes = [
     {
@@ -21,14 +22,14 @@ export const routes: Routes = [
     { path: "contact-us", component: ContactUsComponent },
     //admin using auth Guards
     {
-        path: '', children:
+        path: '',canActivate:[AdminAuthGuardLogin], children:
             [
                 { path: "admin-login", component: AdminLoginComponent }
             ]
     },
 
     {
-        path: '', children:
+        path: '',canActivate:[AdminAuthGuardService], children:
             [
                 { path: "admin-dashboard", component: AdminDashboardComponent },
                 { path: "admin/user", component: UserCrudComponent },
@@ -38,7 +39,7 @@ export const routes: Routes = [
     },
 
     {
-        path:'', children:
+        path:'',canActivate:[SellerBuyerAuthGuardLogin], children:
             [
                 { path: "sign-in", component: SigninSignupComponent },
                 { path: "sign-up", component: SigninSignupComponent }
@@ -46,7 +47,7 @@ export const routes: Routes = [
 
     },
     {
-        path:'', children:
+        path:'', canActivate:[SellerAuthGuardService],children:
             [
                 { path: "seller-dashboard", component: SellerDashboardComponent },
                 {path:"seller/product",component:ProductComponent}
@@ -54,7 +55,7 @@ export const routes: Routes = [
 
     },
     {
-        path:'', children:
+        path:'',canActivate:[BuyerAuthGuardService], children:
             [
                 
                 { path: "buyer-dashboard", component: BuyerDashboardComponent },
