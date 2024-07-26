@@ -52,6 +52,56 @@
       "uploadPhoto": "C:\\fakepath\\frame.png",
       "role": "seller",
       "name": "abc@gmail.com"
+    },
+    {
+      "id": 3,
+      "aboutYou": "He is passionate about shopping.",
+      "age": 23,
+      "agreetc": true,
+      "dob": "2002-12-21",
+      "email": "ajay@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "indore",
+        "addLine2": "indore",
+        "city": "indore",
+        "state": "mp",
+        "zipCode": "1234556"
+      },
+      "language": [
+        "english"
+      ],
+      "password": "123456",
+      "mobNumber": "9098232425",
+      "uploadPhoto": "C:\\fakepath\\860197_423140384441550_1136854431_o.jpg",
+      "role": "buyer",
+      "name": "Ajay"
+    },
+    {
+      "id": 4,
+      "aboutYou": "He is going to sell the indian items to the whole world. and bring dollars in.",
+      "age": 23,
+      "agreetc": true,
+      "dob": "2002-02-21",
+      "email": "vijay@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "indore",
+        "addLine2": "indore",
+        "city": "indore",
+        "state": "mp",
+        "zipCode": "123412"
+      },
+      "language": [
+        "english"
+      ],
+      "password": "123456",
+      "mobNumber": "9089897878",
+      "uploadPhoto": "C:\\fakepath\\New Bitmap Image.bmp",
+      "role": "seller",
+      "name": "vijay"
     }
   ],
   "products": [
