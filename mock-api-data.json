@@ -11,7 +11,7 @@
         "addLine1": "District Center",
         "addLine2": "Janakpuri",
         "city": "New Delhi",
-        "state": "Delhi",
+        "state": "mp",
         "zipCode": "110052"
       },
       "language": [
@@ -102,6 +102,32 @@
       "uploadPhoto": "C:\\fakepath\\New Bitmap Image.bmp",
       "role": "seller",
       "name": "vijay"
+    },
+    {
+      "id": 5,
+      "aboutYou": "Multilingual person.",
+      "age": 21,
+      "agreetc": true,
+      "dob": "2001-12-21",
+      "email": "rajveer@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "Indore",
+        "addLine2": "Indore",
+        "city": "Indore",
+        "state": "mp",
+        "zipCode": "452003"
+      },
+      "language": [
+        "hindi",
+        "telgu"
+      ],
+      "password": "123456",
+      "mobNumber": "9999912123",
+      "uploadPhoto": "C:\\fakepath\\frame.png",
+      "role": "admin",
+      "name": "Rajveer sahu"
     }
   ],
   "products": [
@@ -251,7 +277,7 @@
         "addLine1": "Marathalli",
         "addLine2": "Aswathnagar",
         "city": "Bangalore",
-        "state": "Choose...",
+        "state": "up",
         "zipCode": 560037
       },
       "contact": "09040398006",
@@ -275,7 +301,7 @@
         "addLine1": "new delho",
         "addLine2": "wx -1520",
         "city": "delhi",
-        "state": "...",
+        "state": "up",
         "zipCode": "325863558"
       },
       "contact": "83685222555",

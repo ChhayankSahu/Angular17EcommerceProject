@@ -32,7 +32,7 @@ addUser(userDTO: any)
 }
 //get single user  data
 singleUser(userId:any)
-{return this.apiService.get(this.user_url,userId);}
+{return this.apiService.get(this.user_url+userId);}
 //update data of  individual user
 editUser(userId:any,userDTO:any):Observable<any>{
   return this.apiService.put(this.user_url+userId,userDTO);
