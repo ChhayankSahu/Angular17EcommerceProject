@@ -101,7 +101,9 @@ addUser()
       
         this.adminService.addUser(this.userDTO).subscribe(
           data=>{
+            this.addEditUserForm.reset();
             this.getAllUser();
+
             $('#addEditUserModal').modal('toggle');
           },error=>{console.log("my error",error);}
         );
@@ -176,6 +178,7 @@ addUser()
       
         this.adminService.editUser(this.editUserId,this.userDTO).subscribe(
           data=>{
+            this.addEditUserForm.reset();
             this.getAllUser();
             $('#addEditUserModal').modal('toggle');
           },error=>{console.log("my error",error);}

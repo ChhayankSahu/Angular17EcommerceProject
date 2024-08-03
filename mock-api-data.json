@@ -74,9 +74,9 @@
       ],
       "password": "123456",
       "mobNumber": "9098232425",
-      "uploadPhoto": "C:\\fakepath\\860197_423140384441550_1136854431_o.jpg",
+      "uploadPhoto": "C:\\fakepath\\frame.png",
       "role": "buyer",
-      "name": "Ajay"
+      "name": "AjayPal"
     },
     {
       "id": 4,
@@ -128,6 +128,56 @@
       "uploadPhoto": "C:\\fakepath\\frame.png",
       "role": "admin",
       "name": "Rajveer sahu"
+    },
+    {
+      "id": 6,
+      "aboutYou": "NOTHING BAS",
+      "age": 22,
+      "agreetc": true,
+      "dob": "2002-02-21",
+      "email": "ABC@GMAIL.COM",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "INDORE",
+        "addLine2": "INDORE",
+        "city": "INDORE",
+        "state": "mp",
+        "zipCode": "20022"
+      },
+      "language": [
+        "hindi"
+      ],
+      "password": "123456",
+      "mobNumber": "33434344343",
+      "uploadPhoto": "C:\\fakepath\\frame.png",
+      "role": "seller",
+      "name": "IRON MAN"
+    },
+    {
+      "id": 7,
+      "aboutYou": "AVENGERS WILL AVENGE. ",
+      "age": 21,
+      "agreetc": true,
+      "dob": "2002-02-21",
+      "email": "AVENGERS@GMAIL.COM",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "INDORE",
+        "addLine2": "INDORE",
+        "city": "INDORE",
+        "state": "mp",
+        "zipCode": "2332231"
+      },
+      "language": [
+        "hindi"
+      ],
+      "password": "123456",
+      "mobNumber": "221212121",
+      "uploadPhoto": "C:\\fakepath\\frame.png",
+      "role": "buyer",
+      "name": "AVENGERS"
     }
   ],
   "products": [
@@ -306,6 +356,30 @@
       },
       "contact": "83685222555",
       "dateTime": "1/27/2024"
+    },
+    {
+      "id": 0,
+      "userId": 7,
+      "sellerId": 2,
+      "product": {
+        "id": 2,
+        "name": "Water Bottle",
+        "dp": "99",
+        "mrp": "123",
+        "productDesc": "Hygienic bottle: The bottle is made of 100% food grade material & is BPA free ensures a safe drinking. Crystal Clarity: It's sheer body helps to easily identify the contents & also adds beauty to the liquid that you put in, Leak Proof: The bottle has a liquid tight cap that prevents leakage & is unbreakable. Freezer safe: These bottles are compatible with refrigerator & not being curvy the bottle occupies less space. Looks pretty in the fridge or on the table top.",
+        "status": "publish",
+        "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/bottle/w/5/g/1000-cello-h2o-cello-h2o-water-bottel-cello-original-imaeqtj3vyxyehmn.jpeg"
+      },
+      "deliveryAddress": {
+        "id": 0,
+        "addLine1": "INDORE",
+        "addLine2": "INDORE",
+        "city": "INDORE",
+        "state": "mp",
+        "zipCode": "2332231"
+      },
+      "contact": "221212121",
+      "dateTime": "8/4/2024"
     }
   ]
 }

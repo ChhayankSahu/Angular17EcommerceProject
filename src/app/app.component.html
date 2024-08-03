@@ -1,3 +1,10 @@
+<!--
 <app-header></app-header>
 <router-outlet />
+<app-footer></app-footer>
+-->
+<app-header></app-header>
+<main class="container " [ngStyle]="{'min-height.px':footerMaxHeight}"></main>
+<router-outlet></router-outlet>
+<main class="featurtte-diider mt-3"></main>
 <app-footer></app-footer>
