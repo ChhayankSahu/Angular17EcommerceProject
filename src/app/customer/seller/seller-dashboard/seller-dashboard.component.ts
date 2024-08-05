@@ -32,7 +32,7 @@ ngOnInit(): void {
 }
 sellerProductDashboard()
 {
-  this.router.navigateByUrl("/seller/products");
+  this.router.navigateByUrl("/seller/product");
 }
 sellerOrderDashboard(){alert("this.option is for vip candidates");}
 sellerOrderdashboardData(){

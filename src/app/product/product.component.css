@@ -1,0 +1,6 @@
+.sim-pointer{
+    cursor: pointer;
+    color: blue;
+    font-weight: bold;
+    text-decoration-style: dotted;
+}
